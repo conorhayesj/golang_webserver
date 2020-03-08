@@ -8,6 +8,8 @@ import (
     "fmt"
 )
 
+// Test function for "go test" to check server output is correct
+// Test with "go test" from project root.
 func TestHealthCheck(t *testing.T) {
     req, err := http.NewRequest("GET", "/", nil)
 
