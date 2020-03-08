@@ -11,7 +11,7 @@ WORKDIR /builder
 RUN CGO_ENABLED=0 go test -c . -o /builder/app/webserver_test
 RUN CGO_ENABLED=0 go build -o /builder/app/webserver
 
-#Secondary container to be used to run the app. Much smaller footprint (~5MB vs 400MB)
+#Secondary container to be used to run the app. Much smaller footprint (~21MB vs ~400MB)
 FROM alpine
 
 RUN mkdir /app

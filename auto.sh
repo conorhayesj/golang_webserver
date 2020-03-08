@@ -7,5 +7,9 @@ if [ "$TEST_RESULT" != "PASS" ]; then
     exit
 else
     echo "Test result: $TEST_RESULT"
+    echo "Pushing to conchubhair/webby on docker hub..."
+    docker tag conchubhair/webby:latest
+    docker push conchubhair/webby:latest
+    echo "Starting server on port 8080..."
     docker run -p 8080:8080 webby
 fi
